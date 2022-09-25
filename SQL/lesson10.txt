@@ -1,0 +1,42 @@
+select
+*
+from Customers t1
+inner join Customers t2
+on t1.customer_id = t2.customer_id;
+
+
+ АГРЕГАЦИЯ
+ 1. count() - кол-во строк, которые не null
+ 2. max() - максимальное значение
+ 3. min() - минимальное значение
+ 4. avg() - среднее значение
+ 5. sum() - сумма значений
+
+
+select
+item,
+count(*) as count_amount
+from orders
+group by item;
+
+-- Найти сумму возврастов в разбивке по странам
+-- USA - 53
+-- UK - 47
+-- UAE - 28
+
+-- Найти сумму возврастов в разбивке по странам
+-- USA - 53
+-- UK - 47
+-- UAE - 28
+
+select
+sum(age) as sum_age, 
+country
+from Customers
+group by country;
+
+select
+avg(age) as avg_age,
+country
+from Customers
+where country = 'USA';

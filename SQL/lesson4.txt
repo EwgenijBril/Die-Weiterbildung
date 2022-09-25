@@ -1,0 +1,32 @@
+CREATE TABLE Clients (
+id NUMERIC(3) UNIQUE,
+name VARCHAR(20),
+phone NUMERIC(20)
+);
+
+
+INSERT INTO Clients(
+id, name, phone 
+) VALUES (
+1,
+'Bril',
+1766402156
+);
+
+SELECT SUM (Quantity) AS total
+FROM OrderDetail
+
+SELECT COUNT(*) AS total
+FROM Customers
+
+SELECT AVG(Price) as avg_price,
+		MIN(Price) as min_price,
+        MAX(Price) as max_price
+FROM Products;
+
+SELECT ProductID,
+Price as PriceEuro,
+Price*137 as PriceJPY
+FROM Products;
+
+

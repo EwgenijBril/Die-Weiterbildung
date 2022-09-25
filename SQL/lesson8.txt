@@ -1,0 +1,10 @@
+SELECT 
+	ProductName, 
+	Price AS Price,
+	ROUND(Price * 137) AS PriceJPY
+FROM Products
+
+SELECT ProductName,
+		Price AS 'Price in euro',
+    	Price * 137 AS 'Price in JPY'
+FROM Products

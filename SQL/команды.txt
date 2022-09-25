@@ -1,0 +1,6 @@
+-- БАЗОВЫЕ ОПЕРАЦИИ В ЛЮБОЙ СУБД
+-- INSERT / CREATE (новый клиент) == INSERT INTO / insert_one
+-- UPDATE (модификация) == UPDATE / update_one
+-- DELETE (удаление) == DELETE FROM / delete_one
+-- READ (чтение) == SELECT FROM / find_one
+-- "CRUD must have"

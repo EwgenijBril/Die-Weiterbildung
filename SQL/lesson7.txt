@@ -1,0 +1,46 @@
+select
+*
+from Customers
+inner join orders
+on Customers.customer_id = Orders.customer_id;
+
+select
+Customers.first_name,
+Customers.last_name,
+Orders.item,
+Orders.amount
+from Customers
+inner join orders
+on Customers.customer_id = Orders.customer_id;
+
+select
+t1.first_name,
+t1.last_name,
+t2.item,
+t2.amount
+from Customers t1
+inner join orders t2
+on t1.customer_id = t2.customer_id;
+
+select
+t1.customer_id,
+t1.first_name,
+t1.last_name,
+t2.item,
+t2.amount
+from Customers t1
+left join orders t2
+on t1.customer_id = t2.customer_id;
+
+select
+t1.customer_id,
+t1.first_name,
+t1.last_name,
+t2.item,
+t2.amount,
+t3.status
+from Customers t1
+inner join orders t2
+on t1.customer_id = t2.customer_id
+inner join Shippings t3
+on t2.customer_id = t3.customer;

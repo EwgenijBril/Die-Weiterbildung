@@ -1,0 +1,68 @@
+show databases;
+drop database lesson;
+
+create database homework;
+use homework;
+
+create table animals
+( id  numeric(10) unique,
+title varchar(20),
+country varchar(30)
+);
+
+insert into animals 
+(id,
+ title, 
+ country
+ ) value (
+ 1, 
+ 'doog', 
+ 'Berlin'
+ );
+ 
+ insert into animals 
+(id,
+ title, 
+ country
+ ) value (
+ 2, 
+ 'cat', 
+ 'USA'
+ );
+ 
+ insert into animals 
+(id,
+ title, 
+ country
+ ) value (
+ 3, 
+ 'fish', 
+ 'France'
+ );
+ select * from animals;
+ 
+ alter table animals
+ add age integer(0);
+ 
+ alter table animals
+ drop column age;
+
+delete from animals
+where age = 0;
+ 
+ set sql_safe_updates = 0;
+ 
+alter table animals
+modify column age numeric(3,1);
+
+alter table animals
+modify column age integer (0);
+
+alter table animals
+change age animal_age integer(0);
+
+select * from animals;
+
+ alter table animals
+ drop column animal_age;
+  set sql_safe_updates = 0;

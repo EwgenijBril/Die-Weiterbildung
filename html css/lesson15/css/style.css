@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.box{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+   
+}
+
+.box-1{
+    left: 0;
+    top: 0;
+}
+
+.box-2{
+    left: 100px;
+    top: 100px;
+}
+
+.box-3{
+    right: 0;
+    top: 0;
+}
+
+.box-4{
+    right: 100px;
+    top: 100px;
+}
+
+.box-5{
+    right: 0;
+    bottom: 0;
+}
+
+.box-6{
+    right: 100px;
+    bottom: 100px;
+}
+
+.box-7{
+   left: 0;
+   bottom: 0;
+}
+
+.box-8{
+    left: 100px;
+    bottom: 100px;
+ }
+
+
+
+

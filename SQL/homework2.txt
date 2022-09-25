@@ -1,0 +1,30 @@
+1.Вывести все (только) имена клиентов.
+SELECT
+CustomerName
+from Customers
+__________________________________________
+2.Вывести клиентов из Берлина, имена которых содержат слово "del".
+SELECT
+*
+from Customers
+where Country = 'Germany' and CustomerName like '%del%'
+____________________________________________________________
+3.Вывести контактные имена клиентов из Лондона.
+SELECT
+ContactName
+from Customers
+where City = 'London' 
+____________________________________________________________________________
+4.Создать таблицу Users с полями id, name, phone, country и добавить туда несколько пользователей.
+
+INSERT INTO Users (
+id,
+name,
+phone,
+country
+) VALUES (
+2,
+'Sofija',
+'+49 156 34529006',
+'Germany'
+);

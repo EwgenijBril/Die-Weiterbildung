@@ -1,0 +1,159 @@
+Создать таблицу goods (товары) с полями:
+id (уникальное значение)
+title (cтрока максимум 30 символов)
+quantity (число больше 0)
+price (максимум 5-значное число)
+in_stock (символ (Y/N))
+
+CREATE TABLE Doogs 
+  (id        NUMERIC(10) UNIQUE,
+  title      VARCHAR(30),
+  quantity   NUMERIC(10),
+  price      NUMERIC(5),
+  in_stock   VARCHAR(1)
+  );
+___________________________________________________
+2. Заполните созданную таблицу данными, минимум 10 строк.
+
+
+
+INSERT INTO Doogs
+  (id,       
+  title,      
+  quantity,   
+  price,      
+  in_stock   
+  ) VALUES (
+    2,
+    'Tometoes',
+    7,
+    3.59,
+    'Y'
+    );
+    
+    INSERT INTO Doogs
+  (id,       
+  title,      
+  quantity,   
+  price,      
+  in_stock   
+  ) VALUES (
+    3,
+    'Cucumbers',
+    10,
+    1.40,
+    'Y'
+    );
+    
+    INSERT INTO Doogs
+  (id,       
+  title,      
+  quantity,   
+  price,      
+  in_stock   
+  ) VALUES (
+    4,
+    'Cabbag',
+    9,
+    1.35,
+    'N'
+    );
+    
+    INSERT INTO Doogs
+  (id,       
+  title,      
+  quantity,   
+  price,      
+  in_stock   
+  ) VALUES (
+    5,
+    'Eggplant',
+    10,
+    1.25,
+    'Y'
+    );
+    
+    INSERT INTO Doogs
+  (id,       
+  title,      
+  quantity,   
+  price,      
+  in_stock   
+  ) VALUES (
+    6,
+    'Radish',
+    10,
+    0.85,
+    'N'
+    );
+    
+    INSERT INTO Doogs
+  (id,       
+  title,      
+  quantity,   
+  price,      
+  in_stock   
+  ) VALUES (
+    7,
+    'Peaches',
+    10,
+    3.05,
+    'Y'
+    );
+    
+    INSERT INTO Doogs
+  (id,       
+  title,      
+  quantity,   
+  price,      
+  in_stock   
+  ) VALUES (
+    8,
+    'Melon',
+    6,
+    4.49,
+    'Y'
+    );
+    
+    INSERT INTO Doogs
+  (id,       
+  title,      
+  quantity,   
+  price,      
+  in_stock   
+  ) VALUES (
+    9,
+    'Appels',
+    9,
+    1.50,
+    'N'
+    );
+    
+    INSERT INTO Doogs
+  (id,       
+  title,      
+  quantity,   
+  price,      
+  in_stock   
+  ) VALUES (
+    10,
+    'Kiwi',
+    10,
+    3.43,
+    'Y'
+    );
+____________________________________________________________
+Сформируйте выборку из 3-х самых дорогих товаров в таблице
+SELECT 
+*
+FROM Doogs
+ORDER BY price DESC LIMIT 3;
+    
+    
+    
+    
+    
+    
+    
+    
+    

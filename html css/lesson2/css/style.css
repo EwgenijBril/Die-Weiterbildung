@@ -1,0 +1,21 @@
+ * {
+margin: 0;
+padding: 0;
+ }
+ 
+ 
+ 
+ #p1 {
+      color: green;
+    }
+
+    .p2{
+        color: blueviolet;
+    }
+
+    .p3{
+        border: 1px solid black; /*толщина рамки*/
+        font-size: 40px; /*меняем размер текста*/
+        padding: 20px 30px 50px 60px;
+    
+    }

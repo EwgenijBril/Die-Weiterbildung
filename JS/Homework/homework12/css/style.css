@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.card {
+    width: 200px;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: bisque;
+}
+
+#root {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.progress-container {
+    position: relative;
+    border: 1px solid black;
+    height: 20px;
+}
+
+.progress-line {
+    position: absolute;
+    height: 100%;
+}
+
+.progress-value {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}

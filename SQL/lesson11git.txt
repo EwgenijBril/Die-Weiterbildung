@@ -1,0 +1,45 @@
+SELECT Country,
+COUNT(*) AS TotalClients
+FROM Customers
+GROUP BY Country
+ORDER BY TotalClients DESC
+LIMIT 3
+
+SELECT Country FROM Customers
+UNION
+SELECT Country FROM Suppliers
+
+ПРИМЕР ОРГ. РЕП на GH
+
+Telran/
+	Linux/ (реп)
+		Lections/
+		Homeworks/
+		
+	FE/ (реп)
+		Lections/
+		Homeworks/
+		
+	BE/ (реп)
+		Lections/
+		Homeworks/
+		
+	Gentech/ (реп)
+		Lections/
+		Homeworks/
+			sep16/
+				dump.sql
+			sep17/
+
+git status -s
+git init
+git branch
+git add
+git diff
+git commit
+git show
+git merge
+git push
+git remote
+git fetch
+git checkout

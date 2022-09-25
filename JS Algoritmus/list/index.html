@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Node {
+            value;
+            next;
+        }
+        class List {
+            #head = null;
+            #tail = null;
+
+            add(item) {
+                let temp = new Node();
+                temp.value = item;
+                if(this.head == null) {
+                    this.head = temp;
+                } else {
+                    this.tail.next;
+                }
+                this.tail = temp;
+            }
+            printList() {
+                let temp = this.head;
+                while (temp != null) {
+                    console.log(temp.value + '<br>');
+                    // document.write(temp.value + '<br>')
+                    temp = temp.next;
+                }
+            }
+        }
+
+        let list = new List();
+        list.add(10);
+        list.add(20);
+        list.add(30);
+        list.printList();
+    </script>
+</body>
+</html>

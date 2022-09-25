@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+h1 {
+    color: blue;
+
+}
+
+p{
+    padding: 40px;
+    margin: 15px 0;
+    border: 2px solid blueviolet;
+}
+
+.biography{
+    background-color: green;
+}
+
+.studies{
+    background-color: gold;
+}
+.wish{
+    background-color: brown;
+}
+
+#main{
+    background-color: aqua;
+}

@@ -1,0 +1,33 @@
+ВЕТКА - изолированный поток разработки (еще одна версия проекта)
+
+
+ИМЕНОВАНИЕ ВЕТОК (ПОДХОДЫ)
+1 - тематические ветки (payments, login, etc, ticket001)
+2 - релизные (1.0.1)
+3 - смешанный (оба)
+
+
+GIT FLOW
+
+- main / master / production / stable (production ветка)
+- develop / current (для тестирования)
+- short-term ветки
+  (issue007)
+  
+GITHUB FLOW
+
+- master
+- short-term ветки
+
+
+?? - Untracked files
+M - Modified Files
+A - Added Files
+D - Deleted files
+
+СОСТОЯНИЕ ФАЙЛЫ (КАК ВИДИТ GIT)
+(1) неотслеж.
+(2) отслеж.
+(3) игнорируемые
+
+

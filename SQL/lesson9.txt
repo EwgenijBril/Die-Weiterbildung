@@ -1,0 +1,31 @@
+SELECT
+t1.OrderID,
+t2.CustomerName,
+t2.Address
+FROM Orders t1
+left JOIN Customers t2
+on t2.CustomerID = t2.CustomerID;
+
+delete from customers
+where customerID = 90;
+
+SELECT
+t2.Country
+FROM Orders t1
+LEFT JOIN Customers t2
+on t2.CustomerID = t2.CustomerID
+ORDER BY Country DESC;
+
+SELECT t1.OrderID,
+t2.CustomerName,
+t3.FirstName,
+t4.ShipperName
+FROM [Orders] t1
+LEFT JOIN Customers t2 
+ON t1.CustomerID = t2.CustomerID
+
+LEFT JOIN Employees t3
+ON t1.EmployeeID = t3.EmployeeID
+
+LEFT JOIN Shippers t4
+ON t1.ShipperID = t4.ShipperID

@@ -1,0 +1,28 @@
+UPDATE Orders
+SET EmployeeID = 7
+WHERE OrderID IN (10251, 10252);
+
+UPDATE Orders
+SET EmployeeID = 7,
+    ShipperID = 9
+WHERE OrderID IN (10251, 10252);
+
+SELECT ProductName,
+Price, 
+Price * 1.1 AS PriceBrutto
+FROM Products;
+
+SELECT 
+	ProductName, 
+	Price AS PriceNetto,
+	ROUND(Price * 1.1, 2) AS PriceBrutto,
+    ROUND(Price * .1, 2) AS VAT
+FROM Products
+
+SELECT Country,
+Phone
+FROM Suppliers
+WHERE  Country = 'USA' AND Phone LIKE '%555%';
+
+SELECT SUM (Price) AS total
+FROM Products
