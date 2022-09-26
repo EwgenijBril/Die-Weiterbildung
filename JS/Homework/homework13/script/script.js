@@ -16,7 +16,7 @@ workers_form.addEventListener('submit', event => {
 
     name_elem.innerText = `Name: ${first_name.value} ${last_name.value}`;
     email_elem.innerText = email.value;
-    email_elem.href = 'mailto' + email.value;
+    email_elem.href = `mailto: ${email.value}`;
     progress_value.innerText = progress.value + '%';
 
     photo_elem.setAttribute('src', photo.value);
