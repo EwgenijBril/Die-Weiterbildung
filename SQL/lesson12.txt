@@ -1,0 +1,38 @@
+select 
+	count(
+      case
+      	when customer_id > 3 then 1
+      	else null
+      end
+    ) as cnt
+from Customers
+
+
+select 
+	sum(
+      case
+      	when age < 25 then 0
+      	else age
+      end
+    )
+from customers
+
+select 
+sum(
+  case
+  	when amount > 400 then 0
+  	else amount
+  end
+) as sum
+from Orders
+
+-- Найти среднее значение amount всех заказов, у которых amount больше 400 (включая 400)
+
+select 
+	avg(
+    	case
+      		when amount >= 400 then amount 
+      		else 0
+      	end
+    )
+from Orders
