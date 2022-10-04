@@ -57,6 +57,10 @@ function create_products (title, price) {
 
     container.classList.add('product-item');
 
+    product_container.addEventListener('click', event => {
+        event.target.classList.add('active');
+    });
+
     return container
 }
 
@@ -87,3 +91,32 @@ function delete_id (id) {
 }
 
 render();
+
+
+// 1) создать переменную с ссылкой на форму
+const add_form = document.querySelector('#add_form');
+
+// 2) повесить обработчик submit на форму add_form и при отправке формы выводить
+// что-нибудь в консоль
+add_form.addEventListener('submit', event => {
+    event.preventDefault();
+
+    const input_title = event.target.title;
+    const input_price = event.target.price;
+
+    const new_product = {
+        id: Date.now(),
+        title: input_title.value,
+        price: input_price.value
+    }
+
+    products.push(new_product);
+    render();
+
+    input_title.value = '';
+    input_price.value = '';
+});
+
+// повесить на карточки обработку события click и выводить какой-нибудь 
+// текст в консоль
+
