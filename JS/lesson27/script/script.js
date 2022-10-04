@@ -1,4 +1,4 @@
-const products = [
+let products = [
     {
         id: 1,
         title: 'велосипед',
@@ -44,16 +44,40 @@ root_elem.append(product_container);
     </div>
 */
 
+// function create_delete_button () {
+//     const button = document.createElement('button');
+//     button.innerText = 'X';
+//     button.classList.add('delete-btn');
+//     return button;
+// }
 
-function create_products (title, price) {
+function create_delete_button () {
+    const button = document.createElement('button');
+    button.innerText = 'X';
+    button.classList.add('delete-btn');
+    return button
+}
+
+// создать функцию emptyList которая возвращает параграф с текстом "Товаров нет."
+
+function emptyList () {
+    const p_elem = document.createElement('p');
+    p_elem.innerText = 'Hier sind keine Ware.';
+    return p_elem;
+}
+
+function create_products (id, title, price) {
     const container = document.createElement('div');
     const title_p = document.createElement('p');
     const price_p = document.createElement('p');
+    const delete_btn = create_delete_button();
+
+    delete_btn.addEventListener('click', () => delete_product(id));
 
     title_p.innerText = title;
     price_p.innerText = price;
 
-    container.append(title_p, price_p);
+    container.append(title_p, price_p, delete_btn);
 
     container.classList.add('product-item');
 
@@ -70,14 +94,17 @@ function create_products (title, price) {
 
 function render () {
     product_container.innerText = '';
-    products.forEach(product => {
-        const product_element = create_products(product.title, product.price);
+
+    if(products.length === 0) {
+        product_container.append(emptyList());
+    } else {
+        products.forEach(product => {
+        const product_element = create_products(product.id, product.title, product.price);
         product_container.append(product_element);
-    });
+        });
+    }
+    
 }
-
-
-
 
 // внешнему div элементу добавьте класс product-container
 // div элементу, который является карточкой, присвойте класс product-item
@@ -85,8 +112,9 @@ function render () {
 
 // написать функцию, которая получает id товара и удаляет его из массива
 
-function delete_id (id) {
-    products = products.filter(product => product.id !==id);
+
+function delete_product(id) {
+    products = products.filter((product) => product.id !== id);
     render();
 }
 
