@@ -1,0 +1,74 @@
+select  first_name from customers
+union all
+select item from orders
+____________________________________________
+
+select  customer_id from customers
+union all
+select item from orders
+___________________________________________
+
+select  customer_id, last_name from customers
+union all
+select order_id, item from orders
+____________________________________________
+
+select
+	cast(age as integer) as customer_age
+from customers
+union all
+select order_id from orders;
+__________________________________________
+
+select
+      t2.model,
+      t2.price
+from Product t1
+inner join(
+select
+      model,
+      price
+from PC
+union
+select
+      model,
+      price
+from Laptop
+union
+select
+      model,
+      price
+from Printer
+)t2
+on t1.model = t2.model
+where t1.maker = 'B'
+___________________________
+
+Select
+avg(speed)
+from Laptop
+where price > 10
+_________________________
+
+Select
+avg (speed) as Avg_speed
+from PC t1
+inner join Product t2
+on t1.model = t2.model
+where t2.maker = 'A'
+____________________________
+14
+select
+      t1.class,
+      t1.name,
+      t2.country
+from Ships t1
+inner join Classes t2
+on t1.class = t2.class
+where t2.numGuns >= 10
+__________________________________
+15
+Select hd
+from Pc
+group by hd
+having count(*) > 1
