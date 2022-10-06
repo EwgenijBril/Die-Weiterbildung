@@ -80,7 +80,7 @@ const arr_2 = [
         length: 6
     },
     {
-        id: 1,
+        id: 4,
         word: 'лыжи', 
         length: 4
     },
