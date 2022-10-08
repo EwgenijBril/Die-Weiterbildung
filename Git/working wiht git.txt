@@ -1,0 +1,39 @@
+nano
+CTRL + S
+CTRL + X
+:wq
+Редакторы
+- CLI
+	- nano
+	- vim
+
+- GUI
+	- idea
+	- vscdode
+	...
+
+
+ПЕРЕЗАПИСЬ ПОСЛЕДНЕГО КОММИТА
+
+(ВНИМАНИЕ! ДЕСТРУКТИВНАЯ ОПЕРАЦИЯ)
+(НЕЛЬЗЯ ДЕЛАТЬ, ЕСЛИ УЖЕ СДЕЛАЛ PUSH НА GH)
+
+git commit --amend -m 'правильный комментарий'
+
+git init
+git add 
+git status
+git pull
+git fetch
+git diff
+git show
+git push
+git remote
+git revert
+git reset
+git rm
+git merge
+git clone
+git rebase
+git log
+
