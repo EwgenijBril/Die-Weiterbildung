@@ -8,7 +8,7 @@ export default function Nav() {
         <a>
             <img src={logo} alt="logo" />
         </a>
-        <ul>
+        <ul className={s.nav_menu}>
         <li>Главная</li>
         <li>Услуги</li>
         <li>Кейсы</li>
