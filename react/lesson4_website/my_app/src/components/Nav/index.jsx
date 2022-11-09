@@ -5,7 +5,7 @@ import s from './index.module.css'
 export default function Nav() {
   return (
     <nav className={['wrapper', s.nav_block].join(' ')}>
-        <a>
+        <a href='/#'>
             <img src={logo} alt="logo" />
         </a>
         <ul className={s.nav_menu}>
