@@ -27,6 +27,11 @@ h2 {
 
 @media (max-width: 1100px) {
     .wrapper {
-        max-width: 618px
+        max-width: 630px
+    }
+
+    .subheader {
+        display: none;
     }
 }
+
