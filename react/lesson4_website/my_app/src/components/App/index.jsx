@@ -4,12 +4,16 @@ import Contacts from '../Contacts';
 import Footer from '../Footer';
 import Nav from '../Nav';
 import Services from '../Services';
+import {useState} from 'react'
 
 
 function App() {
+
+  const [menuActive, setMenuActive] = useState(true);
+
   return (
     <div >
-      <Nav/>
+      <Nav menuActive={menuActive} setMenuActive={setMenuActive}/>
       <Services/>
       <AboutUs/>
       <Contacts/>
