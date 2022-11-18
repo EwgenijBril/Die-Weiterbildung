@@ -5,8 +5,8 @@ import AddUserForm from '../../components/AddUserForm'
 export default function ConfigurationsPage() {
   return (
     <div>
-        <AddTeamForm/>
-        <AddUserForm/>
+        <AddTeamForm />
+        <AddUserForm />
     </div>
   )
 }
