@@ -23,10 +23,10 @@ function App() {
     }])
   }
 
-  const deleteUser = () => {}
+  const deleteUser = (id) => setUsers(users.filter(el => el.id !== id));
 
   return (
-    <Context.Provider value={{teams, addTeam, addUser, users}}>
+    <Context.Provider value={{teams, addTeam, addUser, users, deleteUser}}>
       <Nav/>
       <Routes>
         <Route path="/configurations_page" element={<ConfigurationsPage/>}/>
