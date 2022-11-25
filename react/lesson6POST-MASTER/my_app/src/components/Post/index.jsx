@@ -15,7 +15,7 @@ export default function Post({id, title, text, like, comments}) {
         <p>{title}</p>
         <p>{text}</p>
         <p className={like_style} onClick={() => change_like(id)}>{like_text}</p>
-        <CommentsContainer comments={comments}/>
+        <CommentsContainer comments={comments} post_id={id}/>
     </div>
   )
 }
