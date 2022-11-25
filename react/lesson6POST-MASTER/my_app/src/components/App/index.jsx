@@ -16,11 +16,20 @@ function App() {
     setPost([...posts])
   }
 
-  //const add_post = (title.value, text.value) => {}
+  const add_post = (title, text) => setPost([
+    ...posts,
+    {
+      id: Date.now(),
+      title: title ,
+      text: text,
+      like: false,
+      comments: []
+    }
+  ])
 
   return (
     <div >
-      <Context.Provider value={{ posts, change_like }}>
+      <Context.Provider value={{ posts, change_like, add_post }}>
         <AddPostForm/>
         <PostContainer/>
       </Context.Provider>

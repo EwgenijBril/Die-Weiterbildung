@@ -5,6 +5,7 @@
     margin: 10px;
     width: 350px;
     position: relative;
+    min-height: 80px;
 }
 
 .like_btn {

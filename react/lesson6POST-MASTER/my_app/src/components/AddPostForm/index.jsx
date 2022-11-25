@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import s from './index.module.css'
+import { Context } from '../../context'
 
 export default function AddPostForm() {
+
+  const { add_post } = useContext(Context)
 
     const submit = event => {
         event.preventDefault()
         const { title, text} = event.target;
-        console.log(title.value, text.value);
+        add_post(title.value, text.value);
         title.value = '';
         text.value = '';
     }
