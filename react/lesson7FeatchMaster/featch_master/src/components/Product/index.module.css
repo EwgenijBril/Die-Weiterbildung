@@ -1,0 +1,15 @@
+.product_card {
+    width: 80%;
+    margin: 20px auto;
+    height: 120px;
+    border: 2px solid green;
+    border-radius: 15px;
+    padding: 0 50px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.product_card:hover {
+    background-color: green;
+    color: white;
+}
