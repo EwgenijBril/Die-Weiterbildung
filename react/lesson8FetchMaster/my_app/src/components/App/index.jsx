@@ -20,9 +20,6 @@ function App() {
     getUsers(setUsers)
   }, [])
 
-  console.log(users)
-
-
   return (
     <div >
       <Context.Provider value={{products, users}}>
