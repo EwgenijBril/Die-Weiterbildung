@@ -1,8 +1,9 @@
 import React from 'react'
+import s from './index.module.css'
 
 export default function User({id, name, email,role, avatar}) {
   return (
-    <div>
+    <div className={s.user_card}>
         <p>ID: {id} </p>
         <p>Name: {name} </p>
         <p>Email: {email} </p>
