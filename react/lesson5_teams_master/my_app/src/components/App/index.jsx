@@ -1,8 +1,8 @@
 import ConfigurationsPage from "../../pages/ConfigurationPage";
 import TeamsPage from "../../pages/TeamsPage";
 import Nav from "../Nav";
-import { Routes, Route } from 'react-router-dom'
-import { useState } from 'react'
+import { Routes, Route} from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import { Context } from '../../context'
 
 
@@ -10,6 +10,19 @@ function App() {
 
   const [ teams, setTeams ] = useState([]);
   const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    const teams = JSON.parse(localStorage.getItem('teams'));
+    const users = JSON.parse(localStorage.getItem('users'));
+    if (teams) setTeams(teams);
+    if (users) setUsers(users);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('teams', JSON.stringify(teams));
+    localStorage.setItem('users', JSON.stringify(users));
+  }, [teams, users]);
+
 
   const addTeam = (team_title) => {
     setTeams([...teams, {value: team_title, label: team_title }])
