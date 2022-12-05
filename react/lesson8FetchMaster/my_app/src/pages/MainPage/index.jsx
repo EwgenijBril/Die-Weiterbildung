@@ -11,6 +11,9 @@ export default function MainPage() {
         <Link to='users_page'>
             <button>Users</button>
         </Link>
+        <Link to='/todos'>
+            <button>To do list</button>
+        </Link>
     </div>
   )
 }
