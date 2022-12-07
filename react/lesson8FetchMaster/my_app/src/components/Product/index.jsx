@@ -4,9 +4,12 @@ import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
-export default function Product({title, price, description}) {
+export default function Product({title, price, description, images}) {
 
   const settings = {
+    autoplaySpeed: 300,
+    autoplay: true,
+    adaptiveHeight: false,
     dots: true,
     fade: true,
     infinite: true,
@@ -17,8 +20,7 @@ export default function Product({title, price, description}) {
 
   return (
     <div className={s.product_card}>
-      <div>
-        <Slider {...settings}>
+        <Slider {...settings} className={s.slider}>
           <div>
             <img src={images[0]} alt='img1' />
           </div>
@@ -32,7 +34,6 @@ export default function Product({title, price, description}) {
             <img src={images=[3]} />
           </div>
         </Slider>
-        </div>
         
         <p>Title: {title}</p>
         <p>Price: {price}</p>
