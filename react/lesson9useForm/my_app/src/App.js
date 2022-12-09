@@ -1,9 +1,9 @@
-import FormExample from "./components/FormExample";
+import FormItem from "./components/FormItem";
 
 function App() {
   return (
     <div >
-      <FormExample/>
+      <FormItem/>
     </div>
   );
 }
