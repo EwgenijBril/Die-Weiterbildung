@@ -5,7 +5,7 @@ import Input  from '../Input'
 import s from './index.module.css'
 import { CloseOutlined } from '@ant-design/icons'
 
-export default function FormItem() {
+export default function FormItem({title, button, info_text, form_type, info_text_2 }) {
 
     const {register, handleSubmit} = useForm();
 
@@ -15,25 +15,40 @@ export default function FormItem() {
     const passwordRegister = register('password');
 
   return (
-    <form onSubmit={handleSubmit(submit)} className={s.form_item}>
+    <form onSubmit={ handleSubmit(submit) } className={s.form_item}>
         <CloseOutlined className={s.cross_icon} />
-        <p className={s.form_title}>Registration</p>
+        <p className={ s.form_title }>{title}</p>
+
+        <p className={s.form_descr}>{info_text_2}</p>
+
         <Input 
         type="text" 
         name='imail' 
         placeholder='Email' 
-        {...emailRegister} />
+        { ...emailRegister } />
 
-        <Input 
-        type="text" 
-        name='password' 
-        placeholder='Password' 
-        {...passwordRegister} /> 
+        {
+          ['registration', 'login'].includes(form_type)
+          ? <Input 
+              type="text" 
+              name='password' 
+              placeholder='Password' 
+              { ...passwordRegister } /> 
+          : ''
+        }
 
-        <p className={s.form_descr}>By registering on the site, you agree to our Rules and Privacy Policy and agree to receive newsletters
-</p>
-        <Button color='yellow'>Registration</Button>
-        <Button color='white'>Login</Button>
+       
+
+        <p className={ s.form_descr }> {info_text}</p>
+        <Button color='yellow'>{button.submit}</Button>
+
+        {
+          ['registration', 'login'].includes(form_type)
+          ? <Button color='white'>{button.redirect}</Button> 
+          : ''
+        }
+        
+       
     </form>
   )
 }
