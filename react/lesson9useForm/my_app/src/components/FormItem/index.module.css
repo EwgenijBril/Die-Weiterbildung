@@ -26,10 +26,3 @@
     width: 100%;
 }
 
-.cross_icon {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    font-size: 28px;
-    cursor: pointer;
-}

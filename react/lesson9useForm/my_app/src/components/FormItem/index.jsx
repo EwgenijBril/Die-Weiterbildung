@@ -3,9 +3,10 @@ import { useForm } from 'react-hook-form'
 import Button from '../Button'
 import Input  from '../Input'
 import s from './index.module.css'
-import { CloseOutlined } from '@ant-design/icons'
+import { Link } from 'react-router-dom'
 
-export default function FormItem({title, button, info_text, form_type, info_text_2 }) {
+
+export default function FormItem({title, button, info_text, form_type, info_text_2, link_url }) {
 
     const {register, handleSubmit} = useForm();
 
@@ -16,7 +17,7 @@ export default function FormItem({title, button, info_text, form_type, info_text
 
   return (
     <form onSubmit={ handleSubmit(submit) } className={s.form_item}>
-        <CloseOutlined className={s.cross_icon} />
+        
         <p className={ s.form_title }>{title}</p>
 
         <p className={s.form_descr}>{info_text_2}</p>
@@ -37,14 +38,14 @@ export default function FormItem({title, button, info_text, form_type, info_text
           : ''
         }
 
-       
-
         <p className={ s.form_descr }> {info_text}</p>
+        
         <Button color='yellow'>{button.submit}</Button>
 
         {
           ['registration', 'login'].includes(form_type)
-          ? <Button color='white'>{button.redirect}</Button> 
+          ? <Link to={link_url} style={{textDecoration: 'none'}}> <Button color='white'>{button.redirect}</Button> 
+           </Link>
           : ''
         }
         

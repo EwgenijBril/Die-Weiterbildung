@@ -17,6 +17,7 @@
 .modal_content {
     background-color: white;
     border-radius: 20px;
+    position: relative;
 
 }
 
@@ -24,4 +25,13 @@
     pointer-events: all;
     opacity: 1;
 
+}
+
+.cross_icon {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 10;
 }
