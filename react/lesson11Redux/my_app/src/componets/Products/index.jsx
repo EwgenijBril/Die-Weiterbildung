@@ -1,15 +1,13 @@
 import React from 'react'
-import { addProduct } from '../../store/reducers/productReducer';
+import { addProduct, deleteProduct } from '../../store/reducers/productReducer';
 import { useDispatch, useSelector } from 'react-redux'
+import ProductItem from '../ProductItem';
 
 export default function Products() {
 
     const dispatch = useDispatch();
     const state = useSelector(state => state.products);
-    console.log(state)
-
-
-
+  
     const submit = event => {
         event.preventDefault();
         const { title, price } = event.target;
@@ -20,6 +18,9 @@ export default function Products() {
         title.value = '';
         price.value = '';
     }
+
+    const delete_product = id => dispatch(deleteProduct(id))
+
   return (
     <div>
         <form onSubmit={submit}>
@@ -27,7 +28,11 @@ export default function Products() {
             <input type="text" name='price' placeholder='Price' />
             <button>Add</button>
         </form>
-        <div></div>
+        <div>
+            {
+                state.map(el => <ProductItem key={el.id} {...el} delete_product={delete_product}/>)
+            }
+        </div>
     </div>
   )
 }
