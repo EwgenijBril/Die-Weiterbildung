@@ -23,7 +23,7 @@ export const languageCardsReducer = ( state = defaultState, action) => {
             return el
           })
         } else  if (action.type === DELETE_CARD){
-            return state.filter(el => el.id !==action.payload)
+            return state.filter(el => el.id !== action.payload)
         } else {
             return state
         }
