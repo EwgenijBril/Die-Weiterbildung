@@ -1,5 +1,5 @@
 import React from 'react'
-import { addCard } from '../../store/reducers/languageCardsReducer';
+import { addCard, changeCard, deleteCard } from '../../store/reducers/languageCardsReducer';
 import { useDispatch, useSelector } from 'react-redux'
 import LanguageCard from '../LanduageCard';
 
@@ -20,6 +20,10 @@ export default function LanguageCards() {
     rus.value = '';
     eng.value = '';
 }
+
+  const change_card = id => dispatch(changeCard(id));
+  const delete_card = id => dispatch(deleteCard(id))
+
     
   return (
     <div>
@@ -31,7 +35,7 @@ export default function LanguageCards() {
 
         <div>
           {
-            state.map(el => <LanguageCard key={el.id} {...el}/>)
+            state.map(el => <LanguageCard key={el.id} {...el} change_card={change_card} delete_card={delete_card}/>) 
           }
         </div>
     </div>
