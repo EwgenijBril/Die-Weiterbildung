@@ -7,8 +7,6 @@ export default function PostsContainer() {
 
     const state = useSelector(state => state.post)
 
-   
-
   return (
     <div>
         {

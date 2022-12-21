@@ -10,3 +10,5 @@
 13. Создать компонент Post  - один заголовок h3 и параграф
 14. Из state сформировать карточки внутри PostsContainer
 15. PostsContainer импортировать в PostsPage
+
+
