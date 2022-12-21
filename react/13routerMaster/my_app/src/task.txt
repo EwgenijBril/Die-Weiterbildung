@@ -1,0 +1,6 @@
+1. Настроить роутинг через Layout
+2. Nav и Footer - одинаковые для всех страниц
+3. В Nav - три ссылки на страницы
+4. Написать функцию, которая отправляет get fetch запрос по адресу ["electronics","jewelery","men's clothing","women's clothing"]
+5. Полученные по ссылки данные записать в состояние categories
+https://fakestoreapi.com/
