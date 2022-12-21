@@ -1,0 +1,13 @@
+.user_card {
+    border: 2px solid green;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.cross_icon {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    cursor: pointer;
+}
