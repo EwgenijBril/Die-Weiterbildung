@@ -1,16 +1,21 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import Post from '../Post'
+import { deletePost } from '../../store/reducers/postReducer'
 
 
 export default function PostsContainer() {
 
     const state = useSelector(state => state.post)
 
+    const dispatch = useDispatch()
+
+    const delete_post = id => dispatch(deletePost(id))
+
   return (
     <div>
         {
-            state.map(el => <Post key={el.id} {...el}/>)
+            state.map(el => <Post key={el.id} {...el} delete_post={delete_post}/>)
         }
     </div>
   )
