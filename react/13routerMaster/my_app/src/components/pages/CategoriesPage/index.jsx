@@ -15,8 +15,15 @@ export default function CategoriesPage() {
   return (
     <div className={s.categories_page}>
       {
-       categories.map((el, index) => <CategoryCard key={index} category={el}/>)
+        categories.length === 0
+        ? <p>Categories are loading...</p>
+        : <div >
+           {
+              categories.map((el, index) => <CategoryCard key={index} category={el}/>)
+           }
+          </div>
       }
     </div>
+
   )
 }

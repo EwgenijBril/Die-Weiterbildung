@@ -17,7 +17,14 @@ export default function ProductsPage() {
   return (
     <div className={s.product_page}>
         {
-            products.map(el => <ProductCard key={el.id} {...el}/>)
+            products.length === 0
+            ? <p>{category} are loading...</p>
+            : <div >
+                {
+                    products.map(el => <ProductCard key={el.id} {...el}/>)
+                }
+                </div>
+    
         }
     </div>
   )

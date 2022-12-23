@@ -4,3 +4,9 @@
 4. Написать функцию, которая отправляет get fetch запрос по адресу ["electronics","jewelery","men's clothing","women's clothing"]
 5. Полученные по ссылки данные записать в состояние categories
 https://fakestoreapi.com/
+
+
+6. Написать get fetch запрос на получение одного товара
+7. Создать страницу ProductDescrPage
+8. Встроить новыю страницу в роутинг - /product/:id
+9. Настроить вывод в консоль данных о продукте по id в роуте
