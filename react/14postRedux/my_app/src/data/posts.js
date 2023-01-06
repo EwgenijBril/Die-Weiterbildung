@@ -33,7 +33,16 @@ export const posts_data = [
       title: 'About university',
       text: 'I hate my classes!',
       like: false,
-      comments: []
+      comments: [
+        {
+          id: 1,
+          comment: 'Fine'
+        },
+        {
+          id: 2,
+          comment: 'Good point'
+        },
+      ]
     },
 
     {

@@ -1,6 +1,7 @@
 import React from 'react'
 import s from './index.module.css'
 import { CloseCircleOutlined } from '@ant-design/icons'
+import CommentsContainer from '../CommentsContainer'
 
 export default function Post({id, title, text, like, comments, delete_post}) {
   return (
@@ -8,6 +9,7 @@ export default function Post({id, title, text, like, comments, delete_post}) {
         <CloseCircleOutlined className={s.cross_icon} onClick={() => delete_post(id)}/>
         <p>Title: {title} </p>
         <p>Text: {text} </p>
+        <CommentsContainer comments={ comments }/>
     </div>
   )
 }
