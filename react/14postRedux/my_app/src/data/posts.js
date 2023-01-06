@@ -40,7 +40,7 @@ export const posts_data = [
       id: 4,
       title: 'About children',
       text: 'I love my children',
-      like: false,
+      like: true,
       comments: []
     }
   ]

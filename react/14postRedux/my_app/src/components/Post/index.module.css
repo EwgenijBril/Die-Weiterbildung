@@ -7,3 +7,10 @@
     position: relative;
     min-height: 80px;
 }
+
+.cross_icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
