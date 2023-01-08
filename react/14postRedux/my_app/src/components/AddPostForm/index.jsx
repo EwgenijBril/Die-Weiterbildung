@@ -17,6 +17,7 @@ export default function AddPostForm() {
         title.value = '';
         text.value = '';
     }
+    
   return (
     <form className={s.add_post_form} onSubmit={ submit }>
         <input type="text" name='title' placeholder='Your title' />

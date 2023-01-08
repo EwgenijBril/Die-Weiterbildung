@@ -4,12 +4,13 @@ import { CloseCircleOutlined } from '@ant-design/icons'
 import CommentsContainer from '../CommentsContainer'
 
 export default function Post({id, title, text, like, comments, delete_post}) {
+
   return (
     <div className={s.post_item} >
         <CloseCircleOutlined className={s.cross_icon} onClick={() => delete_post(id)}/>
         <p>Title: {title} </p>
         <p>Text: {text} </p>
-        <CommentsContainer comments={ comments }/>
+        <CommentsContainer comments={ comments } post_id={id}/>
     </div>
   )
 }

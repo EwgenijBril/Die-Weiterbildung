@@ -5,16 +5,16 @@ import { deletePost } from '../../store/reducers/postReducer'
 
 export default function PostsContainer() {
 
-    const state = useSelector(state => state.post);
+  const state = useSelector(state => state.post);
 
-    const dispatch = useDispatch();
-
-    const delete_post = id => dispatch(deletePost(id));
+  const dispatch = useDispatch();
+    
+  const delete_post = id => dispatch(deletePost(id));
 
   return (
     <div>
         {
-            state.map(el => <Post key={el.id} {...el} delete_post={delete_post}/>)
+          state.map(el => <Post key={el.id} {...el} delete_post={delete_post}/>)
         }
     </div>
   )
