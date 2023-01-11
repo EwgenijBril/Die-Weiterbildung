@@ -17,24 +17,26 @@ export const postReducer = ( state = posts_data, action) => {
     if ( action.type === ADD_POST ) {
         return [...state, {
             id: Date.now(),
+            like: false,
+            comments: [],
             ...action.payload
-        }]
+          }]      
     } else if (action.type === DELETE_POST ) {
         return state.filter( el => el.id !== action.payload )
     } else if (action.type === ADD_COMMENT ) {
         const target_state = state.find(el => el.id === action.payload.post_id);
         const newComment = {
           id: Date.now(),
-          comment: action.payload.comment,
+          comment: action.payload.comment
         };
         target_state.comments.push(newComment);
         return [...state];
     } else if ( action.type === DELETE_COMMENT ) {
         const target_state = state.find(el => el.id === action.payload.post_id);
-        target_state.comments = target_state.comments.filter(el => el.id !== action.payload.id);
+        target_state.comments = target_state.comments.filter(el => el.id !== action.payload.comment_id);
         return [...state]
     } else if ( action.type === CHANGE_LIKE ) {
-        const target_card = state.find(el => el.id === action.payload.id);
+        const target_card = state.find(el => el.id === action.payload);
         target_card.like = !target_card.like
         return [...state]   
     } else {

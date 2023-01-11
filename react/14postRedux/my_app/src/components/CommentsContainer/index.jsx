@@ -9,7 +9,7 @@ export default function CommentsContainer({ comments, post_id }) {
   const dispatch = useDispatch();
 
   const delete_comment = (post_id, id)  => dispatch(deleteComment({post_id: post_id, 
-    id: id
+    comment_id: id
   }));
  
   return (

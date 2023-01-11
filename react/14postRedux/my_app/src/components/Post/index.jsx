@@ -9,7 +9,7 @@ export default function Post({id, title, text, like, comments, delete_post}) {
 
   const dispatch = useDispatch();
 
-  const change_like = id => dispatch(changeLike({id: id}))
+  const change_like = id => dispatch(changeLike(id))
 
   const like_text = like ? 'Liked' : 'Like'
 
