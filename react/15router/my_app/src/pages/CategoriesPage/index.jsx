@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import CategoryCard from '../../components/CategoryCard';
 import { getCategories } from '../../requests/categories'
+import s from './index.module.css'
 
 export default function CategoriesPage() {
 
@@ -11,7 +12,7 @@ export default function CategoriesPage() {
     }, []);
     
   return (
-    <div>
+    <div className={s.categories_page}>
         {
             categories.map((el, index) => <CategoryCard key={index} category={el}/>)
         }

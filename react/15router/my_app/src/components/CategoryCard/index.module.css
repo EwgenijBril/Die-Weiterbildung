@@ -1,0 +1,23 @@
+.category_card {
+    border: 2px solid gray;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 15px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.category_card a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.category_card:hover {
+    background-color: #4C4E52;
+
+}
+
+.category_card:hover {
+    color: white;
+}
