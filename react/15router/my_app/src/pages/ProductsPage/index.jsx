@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom'
 import ProductsCard from '../../components/ProductsCard';
 import { getProducts } from '../../requests/products';
@@ -16,16 +16,10 @@ export default function ProductsPage() {
   }, [])
 
   return (
-    <div className={s.product_page}>
-        {
-          products.length === 0
-          ? <p>{ category } are loading...</p>
-          : <div >
-            {
-              products.map(el => <ProductsCard key={el.id} {...el}/>)
-            }
-          </div>
-        }
+    <div className={s.product_page}> 
+      {
+        products.map(el => <ProductsCard key={el.id} {...el}/>)
+      }
     </div>
    
   )
