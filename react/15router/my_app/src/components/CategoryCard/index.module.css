@@ -4,6 +4,8 @@
     margin: 10px 0;
     padding: 15px;
     text-align: center;
+    text-decoration: none;
+    color: black;
     text-transform: capitalize;
 }
 
@@ -20,4 +22,9 @@
 
 .category_card:hover {
     color: white;
+}
+
+.category_card img {
+    width: 150px;
+    object-fit: contain;
 }

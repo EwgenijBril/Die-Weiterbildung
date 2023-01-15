@@ -10,7 +10,7 @@ export default function ProductsCard({ title, description, price, images }) {
         <div className={s.descr_block}>
             <h3> {title} </h3>
             <p>Description: {description} </p>
-            <p>Price: {price} </p>
+            <p>Price: {price}$ </p>
         </div>
     </div>
   )
