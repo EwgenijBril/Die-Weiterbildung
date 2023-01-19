@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout';
 import CategoriesPage from './pages/CategoriesPage';
 import CartPage from './pages/CartPage';
+import ProductsPage from './pages/ProductsPage';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path='/' element={<Layout/>}>
           <Route index element={<CategoriesPage/>}/>
           <Route path='cart' element={<CartPage/>}/>
+          <Route path=':category' element={<ProductsPage/>}/>
         </Route>
       </Routes>
 
