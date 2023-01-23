@@ -1,4 +1,12 @@
+.title {
+    margin: 20px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+
 .products {
+    position: relative;
     margin: 40px auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
