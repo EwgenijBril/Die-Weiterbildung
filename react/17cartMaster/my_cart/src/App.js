@@ -1,5 +1,6 @@
 import AddProductsForm from "./components/AddProductsForm";
 import ProductsContainer from "./components/ProductsConstainer";
+import Cart from "./components/Cart";
 
 
 
@@ -8,6 +9,7 @@ function App() {
     <div>
         <AddProductsForm/>
         <ProductsContainer/>
+        <Cart/>
     </div>
   
   );

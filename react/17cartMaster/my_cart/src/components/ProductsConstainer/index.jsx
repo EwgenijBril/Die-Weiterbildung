@@ -4,12 +4,12 @@ import ProductCard from '../ProductCard'
 
 export default function ProductsContainer() {
 
-  const products = useSelector( state => state.products)
+  const products = useSelector( state => state.products );
 
   return (
     <div>
       {
-        products.map(el =>< ProductCard key={el} {...el}/>)
+        products.map(el => < ProductCard key={el.id} {...el}/>)
       }
     </div>
   )

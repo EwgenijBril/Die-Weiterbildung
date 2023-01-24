@@ -1,8 +1,10 @@
 import { createStore, combineReducers } from 'redux'
-import { productReducer } from './reducers/product';
+import { cartReducer } from './reducers/cartReducer';
+import { productReducer } from './reducers/productReducer';
 
 const rootReducer = combineReducers({
-    products: productReducer
+    products: productReducer,
+    cart: cartReducer
 });
 
 export const store = createStore(rootReducer)

@@ -1,13 +1,13 @@
 import React from 'react'
-import { addProduct } from '../../store/reducers/product';
+import { addProduct } from '../../store/reducers/productReducer';
 import { useDispatch } from 'react-redux';
 
 
 
 export default function AddProductsForm() {
 
-   const dispatch = useDispatch();
-
+  const dispatch = useDispatch();
+  
     const submit = event => {
         event.preventDefault()
         const { title, price } = event.target;
