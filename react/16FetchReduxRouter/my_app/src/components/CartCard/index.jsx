@@ -1,16 +1,17 @@
 import React from 'react'
 import s from './index.module.css'
 
-export default function CartCard({image, title}) {
+
+export default function CartCard({id, image, title, price, count}) {
+
   return (
-    <div className={s.cart_card}>
-        <p>Image:{image}</p>
-        <p>Title:{title}</p>
-        <button>+</button>
-        <button>-</button>
-        <div>
-           <p>Total:</p> 
-           <button>Clear cart</button>
+    <div className={s.card}>
+        <img src={image} alt={title} />
+        <p>Title:{ title }</p>
+        <p>{ price } x { count } = { price * count }</p>
+        <div className={s.triggers}>
+          <button>+</button>
+          <button>-</button> 
         </div>
         
     </div>
