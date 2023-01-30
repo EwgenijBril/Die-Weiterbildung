@@ -20,6 +20,7 @@ export default function ProductCard({id, title,  image, price}) {
          <button onClick={ add_to_cart }>Add to cart</button>
       </div>
       <Link to={product_url}>{ title }</Link>
+      <p>Price: {price} $</p>
     </div>
   )
 }
