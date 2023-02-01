@@ -12,8 +12,8 @@ export default function Header() {
         <div >
         <Nav/>
         <img src={logo} alt="logo" />
-        <p>Sales:<br/>+1 (800) 315-5939</p>
         <div className={s.info_block}>
+            <p>Sales:<br/>+1 (800) 315-5939</p>
             <BsGlobe2 className={s.glob_icon}/>
             <p>Search:</p>
             <p>Log in:</p>
