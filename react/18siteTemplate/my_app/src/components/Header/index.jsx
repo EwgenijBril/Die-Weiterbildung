@@ -15,7 +15,6 @@ export default function Header() {
         <p>Sales:<br/>+1 (800) 315-5939</p>
         <div className={s.info_block}>
             <BsGlobe2 className={s.glob_icon}/>
-            <p>{sales}</p>
             <p>Search:</p>
             <p>Log in:</p>
         </div>
