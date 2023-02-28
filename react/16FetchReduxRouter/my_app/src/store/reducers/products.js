@@ -33,6 +33,5 @@ export const productsReducer = (state = defaultState, action) => {
         })
     } else {
         return state
-    }
-    
+    }  
 }

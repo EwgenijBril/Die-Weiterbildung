@@ -1,0 +1,40 @@
+1. Создать express-приложение
+2. Запустить приложение на порту 2000
+3. Создать .gitignore, вписать туда /node_modules
+4. Создать роуты ('/goods', '/shops') с get-запросами, которые возвращают на клиент список товаров и магазинов соответственно
+
+5. Создать get-запросы ('/goods/:id', '/shop/:id'), по которым возвращаются магазины/товары по переданному в запрос id
+6. Создать post-запросы для обоих роутов для добавления товаров и магазинов
+
+Mongoose
+
+-- 1. Установим mongoose
+npm i mongoose
+
+-- 2. Создадим папку database и файл index.js в ней.
+
+-- 3. Импортируем mongoose в index.js
+import mongoose from ('mongoose')
+
+-- 4. Установим связь с БД. Ссылку для связи взять из личного кабинета в mongodb.com
+mongoose.connect('mongodb+srv://username:password....')
+  .then(() => console.log('Connected to MongoDB'))
+  .catch(err => console.log(err))
+
+  Чтобы указать текущую базу, надо в ссылке дописать &dbName=db_name
+
+-- 5. Подключаем database к основному index.js
+import './database/index.js'
+
+-- 6. Создаем схему User.js
+-- 7. Импортируем схему User в auth.js
+-- 8. Прописать post-запрос на /register в auth.js
+
+
+Хеширование пароля
+-- 1. Установить библиотеку bcryptjs
+npm i bcryptjs
+
+-- 2. Создадим папку utils -> utils.js
+-- 3. Импортируем bcrypjs в utils.js
+import bcrypt from 'bcryptjs'

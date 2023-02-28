@@ -2,7 +2,7 @@ const defaultState = [];
 
 const ADD_TO_CART = 'ADD_TO_CART';
 const CLEAR_CART = 'CLEAR_CART'
-const INCREMENT_COUNT ='INREMENT_COUNT'
+const INCREMENT_COUNT ='INCREMENT_COUNT'
 const DECREMENT_COUNT ='DECREMENT_COUNT'
 
 export const addToCart = payload => ({type: ADD_TO_CART, payload});

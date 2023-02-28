@@ -55,7 +55,7 @@ export default function ProductsPage() {
       <div className={s.products}>
         {
           products
-          .filter(el => el.hide)
+          .filter(el => !el.hide)
           .map(el => <ProductCard key={el.id} {...el}/> )
         }
       </div>
