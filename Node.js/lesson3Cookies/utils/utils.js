@@ -5,6 +5,6 @@ const hashPassword = password => {
     return bcrypt.hashSync(password, salt) 
 }
 
-const comparePassword = password => {}
+const comparePassword = (password, hash) => bcrypt.compareSync(password, hash);
 
 export { hashPassword, comparePassword }

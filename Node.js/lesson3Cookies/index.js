@@ -11,7 +11,7 @@ import './database/index.js'
 
 const app = express();
 
-const PORT = 2000;
+const PORT = 2001;
 
 app.use(express.json());
 app.use(cookieParser());
