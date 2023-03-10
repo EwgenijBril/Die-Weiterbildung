@@ -1,0 +1,9 @@
+1. Установить sequelize
+npm i sequelize 
+
+2. Установить драйвер для диалекта
+npm i mysql2
+
+3. Создать папку database -> index.js
+
+4. В db index.js создать экзепляр sequelize, экпортировать и импортировать в основной index.js
