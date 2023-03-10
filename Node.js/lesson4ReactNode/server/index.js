@@ -12,13 +12,15 @@ const PORT = 2000;
 app.use(express.json());
 
 app.use(session({
-    secret: "secret word", // нужно для шифрования и дешифрования куков
+    secret: "DKFJURNVH", // нужно для шифрования и дешифрования куков
     resave: false,
     saveUninitialized:false
 }));
 
 app.use(cors({
-    origin: '*'
+    //origin: '*' * дает получать доступ со всех домена
+    origin: 'http://localhost:3000', //указываем список доверенных доменов
+    credentials: true //включаем поддержку куков
 }));
 
 app.use('/auth', authRouter)
